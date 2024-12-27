@@ -1,0 +1,102 @@
+.flex-blue {
+    background-color: #15284b;
+    color: white;
+}
+.flex,.flex-blue {
+    display:flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    .box-left, .box-right {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    h2 {
+        text-align: start;
+        margin-top:30px;
+        vertical-align: middle;
+        padding: 0px 30px 0px 30px;
+        .textIcon{
+            max-width:40px;
+            padding-bottom: 7px;
+            margin-right:10px; 
+            vertical-align: middle;
+        }
+    }
+    p {
+        line-height: 28px;
+        text-align: justify;
+        max-width: 500px;
+        padding: 0px 30px 0px 30px;
+        font-family: Helvetica, sans-serif;
+    }
+    button {
+        color: white;
+        margin-top:10px;
+        padding: 20px;
+        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(43, 12, 167);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    
+    }
+}
+
+.features {
+  padding: 0px 80px 0px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 3rem 0;
+}
+
+
+.feature-box {
+    max-width: 400px;
+    background-color: #051b31;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-section{
+    margin-bottom: 30px;
+    h2 {
+        margin-bottom: 50px;
+    }
+    .project-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 70px;
+    }
+    @media(max-width: 700px){
+        .project-container{
+            gap: 30px;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color:  #15284b;
+    color: white;
+    position: relative;
+    bottom: 0;
+}
+
+@media(max-width: 700px){
+    .dropdown {
+        visibility: visible;
+    }
+    .flex-blue,.flex {
+        gap: 10px;
+    }
+}
