@@ -18,16 +18,22 @@ const Navbar = () => {
                 backgroundColor: window.scrollY ? '#15284b': 'rgb(0,0,0,0)'
             }}>
                 <img src = {Image} onClick={() => navigate('/Home')}/>
-                <Link to="target-section" smooth={true} duration={500}>
+                <Link to="inicio-id" smooth={true} duration={500}>
                     <button id = 'Inicio'>Inicio</button>
                 </Link>
-                <Link to="target-section" smooth={true} duration={500}>
+                <Link to="servicios-id" smooth={true} duration={500}
+                offset={-80}>
                     <button className = 'button_hid' >Servicios</button> 
                 </Link>
-                <Link to="target-section" smooth={true} duration={500}>
+                <Link to="proyectos-id" smooth={true} duration={500}
+                offset={-100}>
                     <button className = 'button_hid' >Proyectos</button>
                 </Link>
-                <Link to="targetForm" smooth={true} duration={500}>
+                <Link to="clientes-id" smooth={true} duration={500}
+                offset={-80}>
+                    <button className = 'button_hid' >Clientes</button>
+                </Link>
+                <Link to="contacto-id" smooth={true} duration={500}>
                     <button className = 'button_hid '>Contacto</button>
                 </Link>
                 <button id = 'Display' onClick={interOpenDiv}><FaAngleDown></FaAngleDown></button>
@@ -39,6 +45,9 @@ const Navbar = () => {
                         </Link>
                         <Link to="target-section" smooth={true} duration={500}>
                         <button>Proyectos</button>
+                        </Link>
+                        <Link to="target-section" smooth={true} duration={500}>
+                        <button>clientes</button>
                         </Link>
                         <Link to="targetForm" smooth={true} duration={500}>
                         <button>Contactos</button>

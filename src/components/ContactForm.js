@@ -21,7 +21,7 @@ const ContactForm = () => {
         e.preventDefault();
     }
     return (
-        <div className = 'ContactForm' id = 'targetForm'>
+        <div className = 'ContactForm' id = 'contacto-id'>
             <div className = 'ContactBox' style ={{
                  width: '310px'
             }}>

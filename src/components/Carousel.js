@@ -59,7 +59,7 @@ const Carousel = () => {
     };
   
     return (
-      <div className="carousel">
+      <div className="carousel" id = "servicios-id">
         <button className="nav-button left" onClick={handlePrev}>
           <FaAngleLeft className = 'icon'></FaAngleLeft>
         </button>

@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import { useNavigate } from 'react-router-dom';
 
 import Navbar from '../components/Navbar';
-import Spinner from '../components/Spinner';
+import Partners from '../components/Partners';
 import Carousel from '../components/Carousel';
 import ContactForm from '../components/ContactForm';
 import BoxProject from '../components/BoxProject';
@@ -71,7 +71,7 @@ const Home = () => {
     return(
         <div>
             <Navbar></Navbar>
-            <header > 
+            <header id = "inicio-id"> 
                 <div className = 'container-image'>
                     <img
                         src = {IMAGE1} 
@@ -123,52 +123,52 @@ const Home = () => {
                 </div>
             </header>
             <section> 
-                    <div className = 'flex-blue'>
-                        <div className='box-left'>
-                            <h2><FaHardHat className = 'textIcon'/> ACERCA DE <span style ={{color: '#812990'}}>EA</span>CE</h2>
-                            <p>EACE inició sus operaciones en 2014, 
-                                ofreciendo servicios de consultoría en ingeniería, 
-                                construcción, supervisión y gerencia de proyectos 
-                                en general.
-                            </p>
-                            <p> 
-                                EACE está conformado por un equipo 
-                                profesional con amplia experiencia, tanto en 
-                                ingeniería como en construcción, quienes desarrollan 
-                                los proyectos con todo el know-how para cumplir con 
-                                nuestros clientes en alcance, tiempo, costo y calidad
-                            </p>
-                            <button onClick = {() => navigateInfo()}>CONOCE MÁS</button>
-                        </div>
-                        <div className='box-right'>
-                            <img src = {Image_lateral} style = {{
-                                transform: `translateX(${Math.max(scrollY, 0)}px)`,
-                                filter: `opacity(${Math.max(-(scrollY-500)/6, 0)}%)`,
-                                width: '380px'
-                            }}/>
-                        </div>
+                <div className = 'flex-blue'>
+                    <div className='box-left'>
+                        <h2><FaHardHat className = 'textIcon'/> ACERCA DE <span style ={{color: '#812990'}}>EA</span>CE</h2>
+                        <p>EACE inició sus operaciones en 2014, 
+                            ofreciendo servicios de consultoría en ingeniería, 
+                            construcción, supervisión y gerencia de proyectos 
+                            en general.
+                        </p>
+                        <p> 
+                            EACE está conformado por un equipo 
+                            profesional con amplia experiencia, tanto en 
+                            ingeniería como en construcción, quienes desarrollan 
+                            los proyectos con todo el know-how para cumplir con 
+                            nuestros clientes en alcance, tiempo, costo y calidad
+                        </p>
+                        <button onClick = {() => navigateInfo()}>CONOCE MÁS</button>
                     </div>
-                    <Carousel/>
-                    <Spinner/>
-                    <Band/>
-                    <div className = 'project-section'>
-                        <h2>NUESTROS <span style ={{color: '#812990'}}>PROYECTOS</span></h2>
-                        <div className = 'project-container'>
-                        <BoxProject 
-                            img = {Project1} 
-                            title = 'Minera Gold Fields La Cima S.A.' 
-                            text = 'holllaaaaa'/>
-                        <BoxProject 
-                            img = {Project2} 
-                            title = 'Minera Yanacocha S.R.L.' 
-                            text = 'holllaaaaa'/>
-                        <BoxProject 
-                            img = {Project3} 
-                            title = 'Stracon S.A.' 
-                            text = 'Estudios de mecánica'/>
-                        </div>
+                    <div className='box-right'>
+                        <img src = {Image_lateral} style = {{
+                            transform: `translateX(${Math.max(scrollY, 0)}px)`,
+                            filter: `opacity(${Math.max(-(scrollY-500)/6, 0)}%)`,
+                            width: '380px'
+                        }}/>
                     </div>
-                    <ContactForm/>
+                </div>
+                <Carousel/>
+                <Band/>
+                <div className = 'project-section' id = "proyectos-id">
+                    <h2>NUESTROS <span style ={{color: '#812990'}}>PROYECTOS</span></h2>
+                    <div className = 'project-container'>
+                    <BoxProject 
+                        img = {Project1} 
+                        title = 'Minera Gold Fields La Cima S.A.' 
+                        text = 'holllaaaaa'/>
+                    <BoxProject 
+                        img = {Project2} 
+                        title = 'Minera Yanacocha S.R.L.' 
+                        text = 'holllaaaaa'/>
+                    <BoxProject 
+                        img = {Project3} 
+                        title = 'Stracon S.A.' 
+                        text = 'Estudios de mecánica'/>
+                    </div>
+                </div>
+                <Partners/>
+                <ContactForm/>
             </section>
             
             <footer>
