@@ -32,7 +32,7 @@ const Carousel = () => {
                 <div className = 'image_service2'> 
                 </div>
                 <div className = 'service'>
-                    <h3>Ingeniería</h3>
+                    <h3>Ingeniería de calidad</h3>
                     <p>Brindamos servicios de ingeniería multidisciplinaria en las siguientes especialidades: </p>
                     <ul>
                         <li>Civil</li>
