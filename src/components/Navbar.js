@@ -18,25 +18,27 @@ const Navbar = () => {
                 backgroundColor: window.scrollY ? '#15284b': 'rgb(0,0,0,0)'
             }}>
                 <img src = {Image} onClick={() => navigate('/Home')}/>
-                <Link to="inicio-id" smooth={true} duration={500}>
-                    <button id = 'Inicio'>Inicio</button>
-                </Link>
-                <Link to="servicios-id" smooth={true} duration={500}
-                offset={-80}>
-                    <button className = 'button_hid' >Servicios</button> 
-                </Link>
-                <Link to="proyectos-id" smooth={true} duration={500}
-                offset={-100}>
-                    <button className = 'button_hid' >Proyectos</button>
-                </Link>
-                <Link to="clientes-id" smooth={true} duration={500}
-                offset={-80}>
-                    <button className = 'button_hid' >Clientes</button>
-                </Link>
-                <Link to="contacto-id" smooth={true} duration={500}>
-                    <button className = 'button_hid '>Contacto</button>
-                </Link>
-                <button id = 'Display' onClick={interOpenDiv}><FaAngleDown></FaAngleDown></button>
+                <div className = "buttons-wrapper-navbar">
+                    <Link to="inicio-id" smooth={true} duration={500}>
+                        <button id = 'Inicio'>Inicio</button>
+                    </Link>
+                    <Link to="servicios-id" smooth={true} duration={500}
+                    offset={-80}>
+                        <button className = 'button_hid' >Servicios</button> 
+                    </Link>
+                    <Link to="proyectos-id" smooth={true} duration={500}
+                    offset={-100}>
+                        <button className = 'button_hid' >Proyectos</button>
+                    </Link>
+                    <Link to="clientes-id" smooth={true} duration={500}
+                    offset={-80}>
+                        <button className = 'button_hid' >Clientes</button>
+                    </Link>
+                    <Link to="contacto-id" smooth={true} duration={500}>
+                        <button className = 'button_hid '>Contacto</button>
+                    </Link>
+                    <button className = "display" id = 'Display' onClick={interOpenDiv}><FaAngleDown></FaAngleDown></button>
+                </div>
             </nav>
             {showDropdown && (
                     <div className="dropdown">

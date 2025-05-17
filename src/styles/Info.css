@@ -178,3 +178,25 @@
         }
     }
 }
+.title-box {
+  position:absolute;
+  width: 100%;
+  top: 35%;
+  color: white;
+  h1 {
+      font-size: 36px;
+    }
+  p {
+      font-size: 18px;
+  }
+  @media(max-width: 700px){
+      h1 {
+          font-size: 28px;
+          padding: 0px 30px 0px 30px;
+        }
+      p {
+          font-size: 14px;
+          padding: 0px 30px 0px 30px;
+      }   
+  }
+}
